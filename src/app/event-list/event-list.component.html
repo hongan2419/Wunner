@@ -1,18 +1,18 @@
-
-<!-- <div *ngFor = "let event of events" class="event-list-container" style="margin-top: 50px"> -->
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top">
-        <div class="card-body row">
-            <div class="col-3">
-                Hello
-            </div>
-            <div class="col-6">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-            </div>
-            <div class="col-3">
-                Price
+<div style="margin-top: 150px; margin-left: 50px;" class="row">
+    <div *ngFor="let event of events" class="event-list-container col-3" style="margin-bottom: 20px;">
+        <div class="card" style="width: 18rem;">
+            <img [src]="event.EventPicture" class="card-img-top" style="height: 200px">
+            <div class="card-body row">
+                <div class="col-3" style="color: red;">
+                    {{event.EventDate}}
+                </div>
+                <div class="col-6">
+                    <p class="card-text" style="height: 50px; font-weight: bold;">{{event.EventName}}</p>
+                </div>
+                <div class="col-3" style="font-size: 14px;">
+                    Free
+                </div>
             </div>
         </div>
     </div>
-<!-- </div> -->
+</div>
